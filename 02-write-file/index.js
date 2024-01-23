@@ -13,3 +13,8 @@ stdin.on('data', (data) => {
     exit();
   }
 });
+
+process.on('SIGINT', () => {
+  stdout.write('Goodbuy, fellow!\n');
+  exit();
+});
